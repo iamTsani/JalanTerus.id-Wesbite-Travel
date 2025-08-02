@@ -21,7 +21,7 @@ export default function Navbar() {
       </div>
 
       <div className="navbar-contact">
-        <a href="https://wa.me/6281910901574" target="_blank" rel="noreferrer">
+        <a href="" target="_blank" rel="noreferrer">
           Contact
         </a>
       </div>
