@@ -206,3 +206,147 @@
     justify-content: center;
   }
 }
+
+
+/* Our Service Section */
+.services-section {
+  padding: 4rem 1rem;
+  background-color: #f3f2f2;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255,255,255,0.4);
+  backdrop-filter: blur(10px);
+}
+
+.service-card .icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #007BFF;
+}
+
+
+/* Favorit Pakceges Section */
+.favorite-packages {
+  padding: 4rem 1rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.packages-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  justify-content: center;
+}
+
+.package-card {
+  width: 350px; /* Dibuat lebih kecil */
+  border-radius: 16px;
+  border: 1px solid #d1d1d1;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.package-card:hover {
+  transform: translateY(-6px);
+}
+
+.package-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.package-content {
+  padding: 1rem;
+  text-align: left;
+}
+
+.package-content h3 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.destination-list {
+  list-style-type: disc; 
+  padding-left: 1.25rem;  
+  margin: 0.5rem 0 1rem 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+
+.destination-list li {
+  margin-bottom: 0.25rem;
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.view-more {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background-color: #007BFF;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.view-more:hover {
+  background-color: #0056b3;
+}
+
+.view-all-wrapper {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.view-all-link {
+  display: inline-block;
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.view-all-link:hover {
+  border-bottom: 2px solid #007BFF;
+  color: #0056b3;
+}

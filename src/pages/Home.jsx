@@ -83,6 +83,71 @@ export default function Home() {
     };
   }, []);
 
+  // Service
+  const services = [
+    {
+      icon: <i className="fas fa-map-marked-alt"></i>,
+      title: "Wisata Dalam Negeri",
+      description:
+        "Nikmati berbagai pilihan paket wisata domestik ke destinasi favorit di seluruh Indonesia.",
+    },
+    {
+      icon: <i className="fas fa-plane-departure"></i>,
+      title: "Wisata Luar Negeri",
+      description:
+        "Jelajahi destinasi internasional dengan paket hemat dan layanan profesional.",
+    },
+    {
+      icon: <i className="fas fa-bus-alt"></i>,
+      title: "Penyewaan Transportasi",
+      description:
+        "Sediakan bus, mini bus, atau kendaraan pribadi sesuai kebutuhan perjalanan Anda.",
+    },
+    {
+      icon: <i className="fas fa-kaaba"></i>,
+      title: "Paket Ziarah & Umroh",
+      description:
+        "Layanan khusus perjalanan religi dengan bimbingan berpengalaman dan fasilitas terbaik.",
+    },
+    {
+      icon: <i className="fas fa-sliders-h"></i>,
+      title: "Layanan Custom Trip",
+      description:
+        "Rancang perjalanan sesuai kebutuhan pribadi, komunitas, atau instansi Anda.",
+    },
+    {
+      icon: <i className="fas fa-user-friends"></i>,
+      title: "Pemandu Wisata & Tour Leader",
+      description:
+        "Tour leader berpengalaman yang siap memandu Anda dengan ramah dan profesional.",
+    },
+  ];
+
+  // Favorit Paakceges
+  const packages = [
+    {
+      title: "Road Trip Bromo Sunrise",
+      image: "/images/bromo.jpg",
+      destinations: ["Bromo", "Bukit Teletubbies", "Pasir Berbisik"],
+      price: 1500000,
+      link: "/paket/bromo",
+    },
+    {
+      title: "Eksplorasi Bali 4 Hari",
+      image: "/images/bali.jpg",
+      destinations: ["Uluwatu", "Kintamani", "Tanah Lot", "Ubud"],
+      price: 3200000,
+      link: "/paket/bali",
+    },
+    {
+      title: "Tour Jogja Heritage",
+      image: "/images/jogja.jpg",
+      destinations: ["Candi Prambanan", "Keraton", "Taman Sari", "Malioboro"],
+      price: 1200000,
+      link: "/paket/jogja",
+    },
+  ];
+
   return (
     <div className="home">
       {/* HERO SECTION */}
@@ -125,6 +190,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Overview Section */}
       <section id="overview" className="overview-section">
         <div className="overview-container">
           {/* KIRI - Gambar */}
@@ -156,6 +222,69 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Our Service Section */}
+      <section className="services-section" id="services">
+        <div className="container">
+          <h2 className="section-title">Our Services</h2>
+          <p className="section-subtitle">
+            Layanan terbaik untuk perjalanan Anda.
+          </p>
+          <div className="services-grid">
+            {services.map((service, index) => (
+              <div key={index} className="service-card">
+                <div className="icon">{service.icon}</div>
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Favorit Packeges */}
+      <section className="favorite-packages" id="packages">
+        <div className="container">
+          <h2 className="section-title">Paket Wisata Favorit</h2>
+          <p className="section-subtitle">
+            Rekomendasi terbaik untuk liburan Anda!
+          </p>
+
+          <div className="packages-grid">
+            {packages.map((pkg, index) => (
+              <div key={index} className="package-card">
+                <img
+                  src={pkg.image}
+                  alt={pkg.title}
+                  className="package-image"
+                />
+                <div className="package-content">
+                  <h3>{pkg.title}</h3>
+                  <ul className="destination-list">
+                    {pkg.destinations.map((dest, i) => (
+                      <li key={i}> {dest}</li>
+                    ))}
+                  </ul>
+                  <p className="price">
+                    Mulai dari <strong>Rp {pkg.price.toLocaleString()}</strong>
+                  </p>
+                  <a href={pkg.link} className="view-more">
+                    View More
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="view-all-wrapper">
+          <a href="/Packeges" className="view-all-link">
+            View All Packages 
+          </a>
+        </div>
+      </section>
+
+      
     </div>
   );
 }
