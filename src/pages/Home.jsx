@@ -148,8 +148,56 @@ export default function Home() {
     },
   ];
 
+  // Testimoni data Dummy
+  const testimonials = [
+    {
+      name: "Amanda, Jakarta",
+      text: "Perjalanan menyenangkan dan penuh kenangan. Terima kasih JalanTerus.id!",
+    },
+    {
+      name: "Budi, Bandung",
+      text: "Layanan cepat dan ramah, sangat direkomendasikan untuk liburan keluarga.",
+    },
+    {
+      name: "Sari, Surabaya",
+      text: "Suka banget sama pengaturannya, semua berjalan lancar!",
+    },
+    {
+      name: "Dio, Jogja",
+      text: "Terbaik! Terorganisir dan fleksibel. Pokoknya puas!",
+    },
+    {
+      name: "Nina, Bali",
+      text: "Ini pengalaman paling menyenangkan selama traveling! Paket wisatanya keren-keren.",
+    },
+    {
+      name: "Rian, Medan",
+      text: "Dari awal pemesanan sampai akhir trip semuanya tertata rapi dan profesional.",
+    },
+    {
+      name: "Lia, Semarang",
+      text: "Sopirnya ramah, itinerary fleksibel, dan semua destinasi sesuai ekspektasi.",
+    },
+    {
+      name: "Yusuf, Makassar",
+      text: "Biro travel yang paling bisa diandalkan! Akan booking lagi bulan depan.",
+    },
+    {
+      name: "Citra, Bekasi",
+      text: "Serasa liburan bareng keluarga sendiri, stafnya semua helpful banget!",
+    },
+  ];
+
+  // Partner
+  // useEffect(() => {
+  //   fetch("/partner/partner-logos.json")
+  //     .then((res) => res.json())
+  //     .then((data) => setLogos(data))
+  //     .catch((err) => console.error("Error fetching logos:", err));
+  // }, []);
+
   return (
-    <div className="home">
+    <div className="home" id="home">
       {/* HERO SECTION */}
       <section className="hero">
         <Slider {...settings}>
@@ -169,7 +217,7 @@ export default function Home() {
       <div className="carousel-gradient" />
 
       {/* About Section*/}
-      <section className="about-section" ref={aboutRef}>
+      <section className="about-section" ref={aboutRef} id="about">
         <h2 className="section-title">Tentang Kami</h2>
         <p className="section-desc">
           Kami telah mendampingi perjalanan wisata pelanggan sejak 2022.
@@ -279,12 +327,40 @@ export default function Home() {
 
         <div className="view-all-wrapper">
           <a href="/Packeges" className="view-all-link">
-            View All Packages 
+            View All Packages
           </a>
         </div>
       </section>
 
-      
+      {/* Testimoni Section */}
+      <section className="testimonial-section" id="testimonials">
+        <h2 className="section-title">Apa Kata Mereka?</h2>
+        <div className="testimonial-masonry">
+          {testimonials.map((item, index) => (
+            <blockquote key={index} className="testimonial-quote">
+              <p>"{item.text}"</p>
+              <footer>— {item.name}</footer>
+            </blockquote>
+          ))}
+        </div>
+      </section>
+
+      {/* Partner Section */}
+      {/* <section className="partner-section">
+        <h2 className="partner-title">Partner Kami</h2>
+        <div className="slider-container">
+          <div className="slider-track">
+            {[...logos, ...logos].map((file, i) => (
+              <div className="slide" key={i}>
+                <img src={`/partner/${file}`} alt={`Partner ${i}`} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section> */}
+
+
+
     </div>
   );
 }
