@@ -16,7 +16,7 @@ export default function Navbar() {
       <div className={`navbar-links ${isOpen ? "active" : ""}`}>
         <Link to="/">Home</Link>
         <Link to="/About">Tentang</Link>
-        <Link to="/Packeges">Paket Wisata</Link>
+        <Link to="/Packages">Paket Wisata</Link>
         <Link to="/Gallery">Galeri</Link>
       </div>
 
