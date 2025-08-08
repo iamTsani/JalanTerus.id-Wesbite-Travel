@@ -11,7 +11,7 @@ export const negaraList = [
   "Korea Selatan",
   "Taiwan",
   "Hong Kong",
-  "Makau",
+  "Macau",
   "Tiongkok"
 ];
 
@@ -26,7 +26,7 @@ export const provinsiPerNegara = {
   "Korea Selatan": ["Seoul", "Busan", "Jeju Island", "Incheon", "Gangwon"],
   "Taiwan": ["Taipei", "Kaohsiung", "Taichung", "Tainan", "Hualien"],
   "Hong Kong": ["Kowloon", "Hong Kong Island", "New Territories", "Lantau"],
-  "Makau": ["Cotai", "Macau Peninsula", "Taipa"],
+  "Macau": ["Cotai", "Macau Peninsula", "Taipa"],
   "Tiongkok": ["Beijing", "Shanghai", "Guangzhou", "Shenzhen", "Xi'an", "Hangzhou"]
 };
 
