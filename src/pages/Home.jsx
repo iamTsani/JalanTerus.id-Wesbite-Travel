@@ -326,7 +326,7 @@ export default function Home() {
         </div>
 
         <div className="view-all-wrapper">
-          <a href="/Packeges" className="view-all-link">
+          <a href="./Packages" className="view-all-link">
             View All Packages
           </a>
         </div>
